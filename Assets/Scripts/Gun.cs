@@ -65,7 +65,7 @@ public class Gun : MonoBehaviour
             Transform equipPoint = collision.transform.Find("EquipPoint");
 
             transform.SetParent(equipPoint);
-            transform.localPosition = new Vector3(0.5f, 0f, -5f);
+            transform.localPosition = new Vector3(0f, 0f, -5f);
         }
     }
 }
