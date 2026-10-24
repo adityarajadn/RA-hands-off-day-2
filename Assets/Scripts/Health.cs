@@ -8,20 +8,12 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        /*
-            CLUE:
-            Inisialisasi currentHealth agar nilainya sama dengan maxHealth di awal game
-        */
-        // Tulis kode di sini
+        currentHealth = maxHealth;
     }
 
     public void TakeDamage(int damage)
     {
-        /*
-            CLUE:
-            Kurangi nilai currentHealth dengan damage yang diterima (currentHealth -= damage)
-        */
-        // Tulis kode di sini
+        currentHealth -= damage;
 
         Debug.Log(gameObject.name + " HP: " + currentHealth);
 
@@ -38,10 +30,6 @@ public class Health : MonoBehaviour
             LevelManager.instance.AddKill();
         }
 
-        /*
-            CLUE:
-            Hancurkan objek ini saat HP habis menggunakan fungsi Destroy()
-        */
-        // Tulis kode di sini
+        Destroy(gameObject);
     }
 }

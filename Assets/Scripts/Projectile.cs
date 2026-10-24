@@ -9,11 +9,7 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        /*
-            CLUE:
-            Hancurkan peluru (gameObject) secara otomatis setelah durasi "lifeTime" menggunakan Destroy()
-        */
-        // Tulis kode di sini
+        Destroy(gameObject, lifeTime);
     }
 
     private void Update()
@@ -25,7 +21,7 @@ public class Projectile : MonoBehaviour
     {
         /*
             CLUE:
-            Gerakkan peluru maju ke atas lokal menggunakan:
+            Gerakkan peluru maju ke depan/atas lokal menggunakan transform.Translate:
             transform.Translate(Vector2.up * speed * Time.deltaTime);
         */
         // Tulis kode di sini
@@ -33,7 +29,12 @@ public class Projectile : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        /*
+            CLUE:
+            Cek apakah objek yang ditabrak adalah musuh menggunakan CompareTag:
+            collision.CompareTag("Enemy")
+        */
+        if (/* Tulis kondisi di sini */)
         {
             Health health = collision.GetComponent<Health>();
 
@@ -42,11 +43,7 @@ public class Projectile : MonoBehaviour
                 health.TakeDamage(damage);
             }
 
-            /*
-                CLUE:
-                Hancurkan peluru (gameObject) saat menabrak musuh
-            */
-            // Tulis kode di sini
+            Destroy(gameObject);
         }
     }
 

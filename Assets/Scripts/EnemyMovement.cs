@@ -12,14 +12,9 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
-        /*
-            CLUE:
-            1. Ambil komponen Rigidbody2D menggunakan GetComponent<Rigidbody2D>() dan simpan ke variabel rb
-            2. Cari GameObject player di hierarki dengan GameObject.FindGameObjectWithTag("Player") dan simpan ke variabel playerObject
-        */
-        // Tulis kode rb di sini
+        rb = GetComponent<Rigidbody2D>();
 
-        // Tulis kode playerObject di sini
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
 
         if (playerObject != null)
         {
@@ -35,7 +30,8 @@ public class EnemyMovement : MonoBehaviour
 
         /*
             CLUE:
-            Gerakkan musuh ke arah player dengan mengatur linearVelocity = direction * moveSpeed
+            Gerakkan musuh ke arah player dengan mengatur linearVelocity pada Rigidbody2D:
+            rb.linearVelocity = direction * moveSpeed;
         */
         // Tulis kode di sini
     }
