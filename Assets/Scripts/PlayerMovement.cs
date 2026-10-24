@@ -15,8 +15,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+        /*
+            CLUE:
+            Ambil input pergerakan pemain menggunakan Input.GetAxisRaw:
+            1. Isi variabel horizontal dengan Input.GetAxisRaw("Horizontal");
+            2. Isi variabel vertical dengan Input.GetAxisRaw("Vertical");
+        */
+        // Tulis kode di sini
     }
 
     private void FixedUpdate()
