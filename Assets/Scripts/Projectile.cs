@@ -31,10 +31,10 @@ public class Projectile : MonoBehaviour
     {
         /*
             CLUE:
-            Cek apakah objek yang ditabrak adalah musuh menggunakan CompareTag:
+            Ganti "false" dengan kondisi pengecekan tag musuh:
             collision.CompareTag("Enemy")
         */
-        if (/* Tulis kondisi di sini */)
+        if (false)
         {
             Health health = collision.GetComponent<Health>();
 
