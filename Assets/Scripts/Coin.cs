@@ -7,12 +7,21 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        /*
+            CLUE:
+            Cek apakah objek yang menabrak memiliki tag "Player" menggunakan CompareTag("Player")
+        */
+        if (/* Tulis kondisi di sini */)
         {
             if (LevelManager.instance != null)
             {
                 LevelManager.instance.AddCoin(coinValue);
-                Destroy(gameObject);
+
+                /*
+                    CLUE:
+                    Hancurkan objek koin ini menggunakan Destroy(gameObject)
+                */
+                // Tulis kode di sini
             }
         }
     }

@@ -9,14 +9,27 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, lifeTime);
+        /*
+            CLUE:
+            Hancurkan peluru (gameObject) secara otomatis setelah durasi "lifeTime" menggunakan Destroy()
+        */
+        // Tulis kode di sini
     }
 
     private void Update()
     {
-        transform.Translate(Vector2.up * speed * Time.deltaTime);
+        Move();
     }
 
+    private void Move()
+    {
+        /*
+            CLUE:
+            Gerakkan peluru maju ke atas lokal menggunakan:
+            transform.Translate(Vector2.up * speed * Time.deltaTime);
+        */
+        // Tulis kode di sini
+    }
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,7 +42,11 @@ public class Projectile : MonoBehaviour
                 health.TakeDamage(damage);
             }
 
-            Destroy(gameObject);
+            /*
+                CLUE:
+                Hancurkan peluru (gameObject) saat menabrak musuh
+            */
+            // Tulis kode di sini
         }
     }
 

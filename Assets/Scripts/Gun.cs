@@ -43,7 +43,14 @@ public class Gun : MonoBehaviour
 
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            Instantiate(projectilePrefab,firePoint.position, Quaternion.Euler(0f, 0f, angle - 90f));
+            /*
+                CLUE:
+                Munculkan "projectilePrefab" menggunakan Instantiate() dengan parameter:
+                    - prefab: projectilePrefab
+                    - posisi: firePoint.position
+                    - rotasi: Quaternion.Euler(0f, 0f, angle - 90f)
+            */
+            // Tulis kode di sini
 
             nextFireTime = Time.time + fireRate;
         }

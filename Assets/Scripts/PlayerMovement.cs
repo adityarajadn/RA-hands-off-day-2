@@ -10,18 +10,32 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        /*
+            CLUE:
+            Ambil komponen Rigidbody2D pada GameObject ini menggunakan GetComponent<Rigidbody2D>()
+            dan simpan ke variabel rb.
+        */
+        // Tulis kode di sini
     }
 
     private void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+        /*
+            CLUE:
+            1. Beri value Input.GetAxisRaw("Horizontal") pada variabel horizontal
+            2. Beri value Input.GetAxisRaw("Vertical") pada variabel vertical
+        */
+        // Tulis kode di sini
     }
 
     private void FixedUpdate()
     {
         Vector2 movement = new Vector2(horizontal, vertical).normalized;
-        rb.linearVelocity = movement * moveSpeed;
+
+        /*
+            CLUE:
+            Gerakkan Rigidbody2D dengan mengatur linearVelocity = movement * moveSpeed
+        */
+        // Tulis kode di sini
     }
 }
