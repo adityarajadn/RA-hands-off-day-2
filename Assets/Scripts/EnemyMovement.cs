@@ -28,12 +28,7 @@ public class EnemyMovement : MonoBehaviour
 
         Vector2 direction = (player.position - transform.position).normalized;
 
-        /*
-            CLUE:
-            Gerakkan musuh ke arah player dengan mengatur linearVelocity pada Rigidbody2D:
-            rb.linearVelocity = direction * moveSpeed;
-        */
-        // Tulis kode di sini
+        rb.linearVelocity = direction * moveSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
